@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LFA Applied to CNNs – Project Page</title>
+  <title>Probabilistic Label Spreading – Project Page</title>
   <link rel="icon" type="image/png" href="./assets/images/Browser_Icon.png" />
   <!-- Tailwind (via CDN) -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -35,8 +35,8 @@
       <nav class="space-y-1">
         <a href="#abstract"   class="block hover:underline text-gray-700">Abstract</a>
         <a href="#method"     class="block hover:underline text-gray-700">Method</a>
+        <a href="#overview"  class="block hover:underline text-gray-700">Performance</a>
         <a href="#results"    class="block hover:underline text-gray-700">Results</a>
-        <a href="#resources"  class="block hover:underline text-gray-700">Resources</a>
         <a href="#acks"       class="block hover:underline text-gray-700">Acknowledgments</a>
         <a href="#citation"   class="block hover:underline text-gray-700">Citation</a>
         <a href="#contact"    class="block hover:underline text-gray-700">Contact</a>
@@ -46,8 +46,8 @@
       <div>
         <h3 class="font-semibold mb-1">Paper Links</h3>
         <ul class="list-disc list-inside space-y-1">
-          <li><a href="https://arxiv.org/pdf/2508.02443" class="text-blue-600 hover:underline">PDF (11.8 MB)</a></li>
-          <li><a href="https://arxiv.org/abs/2508.02443" class="text-blue-600 hover:underline">arXiv page</a></li>
+          <li><a href="https://arxiv.org/abs/2602.04574" class="text-blue-600 hover:underline">Paper</a></li>
+          <li><a href="https://github.com/JonathanKlees/prob_label_spreading" class="text-blue-600 hover:underline">GitHub Code</a></li>
         </ul>
       </div>
     </div>
@@ -62,8 +62,8 @@
       <nav class="space-y-2 mb-6 text-sm leading-relaxed">
         <a href="#abstract"   class="block hover:underline text-gray-700">Abstract</a>
         <a href="#method"     class="block hover:underline text-gray-700">Method</a>
+        <a href="#overview"  class="block hover:underline text-gray-700">Performance</a>
         <a href="#results"    class="block hover:underline text-gray-700">Results</a>
-        <a href="#resources"  class="block hover:underline text-gray-700">Resources</a>
         <a href="#acks"       class="block hover:underline text-gray-700">Acknowledgments</a>
         <a href="#citation"   class="block hover:underline text-gray-700">Citation</a>
         <a href="#contact"    class="block hover:underline text-gray-700">Contact</a>
@@ -72,8 +72,8 @@
       <hr class="my-6">
       <h3 class="font-semibold mb-2 text-sm">Paper Links</h3>
       <ul class="list-disc list-inside space-y-1 text-sm leading-relaxed mb-6">
-        <li><a href="https://arxiv.org/pdf/2508.02443" class="text-blue-600 hover:underline">PDF (11.8 MB)</a></li>
-          <li><a href="https://arxiv.org/abs/2508.02443" class="text-blue-600 hover:underline">arXiv page</a></li>
+        <li><a href="https://arxiv.org/abs/2602.04574" class="text-blue-600 hover:underline">Paper</a></li>
+          <li><a href="https://github.com/JonathanKlees/prob_label_spreading" class="text-blue-600 hover:underline">GitHub Code</a></li>
       </ul>
       <hr class="my-6">
     </aside>
@@ -84,31 +84,40 @@
       <!-- HERO -->
       <header class="text-center mb-12">
         <h1 class="text-4xl font-extrabold leading-tight">
-          LFA Applied to CNNs: Efficient Singular Value Decomposition of Convolutional Mappings by Local Fourier Analysis
+          Probabilistic Label Spreading: Efficient and Consistent Estimation of Soft Labels with Epistemic Uncertainty on Graphs
         </h1>
 
         <!-- AUTHORS -->
         <p class="text-sm text-gray-500 mt-3">
-          <a href="mailto:vanbetteray[at]uni-wuppertal.de"
+          <a href="mailto:jonathan.klees[at]uni-osnabrueck.de"
             class="text-blue-600 hover:underline" target="_blank"
-            rel="noopener noreferrer">Antonia van Betteray</a><sup>2</sup> •
-          <a href="mailto:kkahl[at]uni-wuppertal.de"
+            rel="noopener noreferrer">Jonathan Klees</a><sup>1</sup> •
+          <a href="mailto:riedlinger[at]tu-berlin.de"
             class="text-blue-600 hover:underline" target="_blank"
-            rel="noopener noreferrer">Karsten Kahl</a><sup>1</sup> •
+            rel="noopener noreferrer">Tobias Riedlinger</a><sup>2</sup> •
+          <a href="mailto:stehr[at]uni-wuppertal.de"
+            class="text-blue-600 hover:underline" target="_blank"
+            rel="noopener noreferrer">Peter Stehr</a><sup>3</sup> •
+            <a href="mailto:bennet.boeddecker[at]uni-wuppertal.de"
+            class="text-blue-600 hover:underline" target="_blank"
+            rel="noopener noreferrer">Bennet Böddecker</a><sup>3</sup> •
+            <a href="mailto:dk[at]quality-match.com"
+            class="text-blue-600 hover:underline" target="_blank"
+            rel="noopener noreferrer">Daniel Kondermann</a><sup>4</sup> •
           <a href="https://osvia.github.io/team.html"
             class="text-blue-600 hover:underline" target="_blank"
-            rel="noopener noreferrer">Matthias Rottmann</a><sup>2</sup>
+            rel="noopener noreferrer">Matthias Rottmann</a><sup>1</sup>
         </p>
 
         <!-- AFFILIATION FOOTNOTE -->
         <p class="text-xs text-gray-500 mt-1">
-          <sup>1</sup> Department&nbsp;of&nbsp;Mathematics, University&nbsp;of&nbsp;Wuppertal, Wuppertal, Germany
+          <sup>1</sup> Institute of Computer Science, University of Osnabrück, Osnabrück, Germany
           <br>
-          <sup>2</sup> Institute of Computer Science, University of Osnabrück, Osnabrück, Germany
-          <br><br>
-          Frontiers in Artificial Intelligence and Applications, Volume 413
+          <sup>2</sup> Department of Mathematics, Technical University of Berlin, Berlin, Germany
           <br>
-          ECAI 2025 doi: "10.3233/FAIA250793"
+          <sup>3</sup> Department&nbsp;of&nbsp;Mathematics, University&nbsp;of&nbsp;Wuppertal, Wuppertal, Germany
+          <br>
+          <sup>4</sup> Quality Match GmbH, Heidelberg, Germany
         </p>
 
         <!-- LOGO STRIP -->
@@ -118,14 +127,24 @@
             <img src="./assets/images/KeyVisual_Dark.png" alt="OSVIA Lab Logo" class="h-full w-auto" loading="lazy">
           </a>
 
-          <!-- University of Wuppertal Logo (example) -->
+          <!-- University of Osnabrück -->
+          <a href="https://www.uni-osnabrueck.de/en" target="_blank" rel="noopener noreferrer" class="block h-10">
+            <img src="./assets/images/logo_osnabrück.jpg" alt="University of Osnabrück" class="h-full w-auto" loading="lazy">
+          </a>
+
+          <!-- Department of Mathematics TU Berlin -->
+          <a href="https://www.tu.berlin/en/math" target="_blank" rel="noopener noreferrer" class="block h-10">
+            <img src="./assets/images/tu_berlin.png" alt="TU Berlin" class="h-full w-auto" loading="lazy">
+          </a>
+
+          <!-- University of Wuppertal Logo -->
           <a href="https://www.uni-wuppertal.de/" target="_blank" rel="noopener noreferrer" class="block h-10">
             <img src="./assets/images/BUW_Logo.jpg" alt="University of Wuppertal Logo" class="h-full w-auto" loading="lazy">
           </a>
 
-          <!-- University of Osnabrück -->
-          <a href="https://www.uni-osnabrueck.de/en" target="_blank" rel="noopener noreferrer" class="block h-10">
-            <img src="./assets/images/logo_osnabrück.jpg" alt="University of Osnabrück" class="h-full w-auto" loading="lazy">
+          <!-- Quality match -->
+          <a href="https://www.quality-match.com/" target="_blank" rel="noopener noreferrer" class="block h-10">
+            <img src="./assets/images/quality-match-logo.png" alt="Quality Match" class="h-full w-auto" loading="lazy">
           </a>
 
           <!-- Add additional logos here (duplicate & adapt) -->
@@ -136,7 +155,7 @@
         <div class="flex flex-wrap justify-center gap-3 mt-6">
 
           <!-- Paper / Document icon -->
-          <a href="https://ebooks.iospress.nl/doi/10.3233/FAIA250793"
+          <a href="https://arxiv.org/abs/2602.04574"
             class="inline-flex items-center px-6 py-3 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-700">
             <!-- Heroicons outline: DocumentText -->
             <svg class="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"
@@ -152,7 +171,7 @@
           </a>
 
           <!-- GitHub -->
-          <a href="https://github.com/vanbetteray/conv_svd_by_lfa"
+          <a href="https://github.com/JonathanKlees/prob_label_spreading"
             class="inline-flex items-center px-6 py-3 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-700">
             <!-- GitHub Octicon: mark-github -->
             <svg class="w-5 h-5 mr-2" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
@@ -185,176 +204,119 @@
       <section id="abstract" class="space-y-4 lg:max-w-6xl  lg:mx-auto">
         <h2 class="text-2xl font-semibold">Abstract</h2>
         <p>
-          The singular values of convolutional mappings encode interesting spectral properties, which can be used, e.g., to improve generalization and robustness of convolutional neural networks as well as to facilitate model compression. However, the computation of singular values is typically very resource-intensive. The naive approach involves unrolling the convolutional mapping along the input and channel dimensions into a large and sparse two-dimensional matrix, making the exact calculation of all singular values infeasible due to hardware limitations. In particular, this is true for matrices that represent convolutional mappings with large inputs and a high number of channels. Existing efficient methods leverage the Fast Fourier transformation (FFT) to transform convolutional mappings into the frequency domain, enabling the computation of singular values for matrices representing convolutions with larger input and channel dimensions. For a constant number of channels in a given convolution, an FFT can compute N singular values in O(N log N) complexity. In this work, we propose an approach of complexity O(N) based on local Fourier analysis, which additionally exploits the shift invariance of convolutional operators. We provide a theoretical analysis of our algorithm’s runtime and validate its efficiency through numerical experiments. Our results demonstrate that our proposed method is scalable and offers a practical solution to calculate the entire set of singular values – along with the corresponding singular vectors if needed – for high-dimensional convolutional mappings.
+          This work tackles a central challenge in data-centric AI: How to obtain reliable, informative labels for large datasets when high-quality human annotations are scarce and noisy.
+          <br><br>
+          The key idea is to move beyond single “hard” labels and instead estimate soft labels, probability distributions over classes, together with epistemic uncertainty, which reflects how confident we are in those estimates. Our proposed method propagates sparse and noisy human annotations across a similarity graph using a probabilistic extension of the label spreading algorithm. By exploiting similarity structure in the feature space, it can infer high-quality soft labels even when the number of annotations per data point is small.
+          <br><br>
+          Beyond empirical gains, the approach comes with strong theoretical guarantees. We show that probabilistic label spreading yields consistent estimates under mild smoothness assumptions, and we derive PAC-style bounds on the required dataset size and annotation budget. Extensive experiments on standard image benchmarks demonstrate substantial reductions in labeling effort and state-of-the-art performance on a data-centric image classification benchmark. Overall, the work offers a principled and scalable step toward uncertainty-aware, semi-automated dataset labeling.
         </p>
-      </section>
-
-      <!-- MOTIVATION -->
-      <section id="motivation" class="space-y-6 bg-gray-100 rounded-xl px-6 py-8 lg:max-w-6xl lg:mx-auto">
-        <h2 class="text-2xl font-semibold">Motivation</h2>
-        <p>
-          Let $ A: \mathbb{R}^{m \times n \times c_{in}} \longrightarrow \mathbb{R}^{m \times n \times c_{out}} $a convolution mapping, i.e., a linear and translation-invariant transformation with $m, n$ spatial input dimension and $c_{in}$ and $c_{out}$  the respective number of input and output channels. The singular values of such a mapping reveals for example insights into regularization and robustness. However, the singular value decomposition is typically computed from matrices. In matrix representation, the convolution becomes a large sparse banded matrix, cf., Fig. 1(a).  If $m = n$ and $c = c_{in} = c_{out}$ the computation complexity to compute the SVD of the convolution matrix is $\mathcal{O}(n^6c^3)$. It is easy to see, that this explicit SVD computation becomes infeasible.
-        </p>
-        <div class="grid md:grid-cols-1 gap-x-6 gap-y-8">
-          <div class="space-y-3">
-            <h3 class="text-xl font-semibold mb-3 text-center">Matrix representation of $3 \times 3$ convolution on $m \times n$ input.</h3>
-            <figure class="rounded-lg overflow-hidden flex items-center justify-center">
-              <img src="./assets/images/conv_matrix-1.png" 
-                  alt="motivation_image0" 
-                  loading="lazy" 
-                  class="md:w-1/3 h-auto object-cover">
-            </figure>
-          </div>
-          <div class="grid md:grid-cols-1 gap-x-6 gap-y-8">
-            <div class="space-y-3">
-              <h3 class="text-xl font-semibold mb-3 text-center">Matrix composed of $m \cdot n$ blocks  of size $c_{in} \times c_{out}$</h3>
-              <figure class="rounded-lg overflow-hidden flex items-center justify-center">
-                <img
-                  src="./assets/images/block_matrices-1.png"
-                  alt="motivation_image0"
-                  loading="lazy"
-                  class="md:w-1/3 h-auto object-cover"
-                >
-              </figure>
-            </div>
       </section>
 
       <!-- METHOD OVERVIEW -->
       <section id="method" class="space-y-6 bg-gray-100 rounded-xl px-6 py-8 lg:max-w-6xl lg:mx-auto">
         <h2 class="text-2xl font-semibold">Method Overview</h2>
         <p>
-          To efficiently compute the SVD for large convolution mappings for large input and channel dimensions, we exploit the translation-invariance by using local Fourier analysis, which is a method developed for the analysis of iterative solvers.  We make use of the convolution theorem, that states, that convolutions diagonalize under Fourier transform. In particular, by the application of a Fourier transform, the convolution becomes a block-diagonal operator and instead of computing the SVD from the large sparse matrix, the SVD can be computed from the smaller, independent block matrices. 
-
-          A related approach is based on FFT and requires a complexity of $\mathcal{O}(n^2c^2(c + \log n))$. By exploiting the translation-invariance of the convolution operator, our approach requires only a complexity of $\mathcal{O}(n^2 c^3)$, which is asymptotically optimal with respect to the input dimension. 
-
-          To formalize this, we express convolutional mappings as multiplication operators. To that end, we assume periodic boundary conditions, which corresponds to an infinite repetition of the input across space. Furthermore, the convolution acts on a local neighborhood $\mathcal{N}$, e.g., a $3 \times 3$ kernel centered around a spatial coordinate $x$, cf. Fig. 2) 
-
-          Figure 2: $3 \times 3$ kernel neighborhood centered around $x$.  
+          We build on the label spreading algorithm (Zhou et al. 2003) and adapt it such that it supports soft labels
+          and is tailored to the use case of semi-automated labeling in
+          a crowdsourcing setting. The main modification is that label
+          spreading is performed iteratively, each time with only a single
+          seed $x_i$ that has been assigned a feedback $c$ sampled from
+          its soft label $p_i$. In order to ensure efficiency and scalability
+          to large datasets, we use a sparse k nearest neighbor (k-NN)
+          graph as well as efficient solvers to approximate the heat kernel
+          $(I − αS)^{−1}$. The estimate is refined incrementally with each new annotation as illustrated below.  
           
           <div class="grid md:grid-cols-1 gap-x-6 gap-y-8">
             <div class="space-y-3">
               <figure class="rounded-lg overflow-hidden flex items-center justify-center">
-                <img src="./assets/images/kernel-1.png" 
+                <img src="./assets/images/Two_Moons_Illustration.png" 
                     alt="method_image0" 
                     loading="lazy" 
-                    class="md:w-1/3 h-auto object-cover">
+                    class="md:w-l h-auto object-cover">
               </figure>
             </div>
           ⠀
-          <p>
-          Collecting all coupled input and output channels corresponding to each neighboorhood $\delta \in \mathcal{N}$ location yields a matrix 
-          $ M_A^{(\delta)} \in \mathbb{R}^{c_{out}} \times  \mathbb{R}^{c_{in}}.$
-          With that the convolution of $A$ with an input $f$ evaluated at $x$ can be written as a multiplication operator 
-          $
-            (A *f)(x) = \sum_{\delta \in \mathcal{N}} M_A^{(\delta)}  \cdot f(x + \delta).
-          $
-          To apply the convolution theorem, we choose the Fourier mode $f_k = e^{2 \pi \mathtt{i} \langle k, x \rangle}$ as ansatz function, with $k$ denoting a frequency. The convolution of $A$ with $f_k$ reduces to 
-          $
-          (A \ast f_k)(x) = \sum_{\delta \in \mathcal{N}} M^{(\delta)}_{A} \cdot e^{2 \pi \mathtt{i} \langle k, x + \delta \rangle} = \underbrace{\left(
-                  \sum_{\delta \in \mathcal{N}} M^{(\delta)}_{A} \cdot e^{2 \pi \mathtt{i} \langle k, \delta \rangle}
-                  \right)}_{A_k}
-                  e^{2 \pi \mathtt{i} \langle k, x \rangle} = A_k \cdot f_k,
-          $
-          i.e., a matrix vector multiplication. For each frequency $k$ we obtain a symbol matrix $A_k  \in \mathbb{C}^{c_{out} \times c_{in}}$ and thus the convolution becomes a block diagonal operator. With that, the SVD can now be computed from each matrix $A_k$ independently as
-          $
-            A_k = U_k \Sigma_k V^*_k,
-          $
-          where $U_k, V_k^*$ are unitary matrices containing the singular vectors and $\Sigma_k$ is diagonal with singular values as entries. To that end the SVD by LFA can be viewed as a two-staged diagonalization 
-          1. (Block-) Diagonalization by Fourier transform 
-          2. Diagonalization of the block-diagonal matrix by SVD
+          </p>
+          
+      </section>
 
-          This process based on local Fourier analysis is summarized in the following algorithm.
+      <!-- Performance overview -->
+      <section id="overview" class="space-y-6 bg-gray-100 rounded-xl px-6 py-8 lg:max-w-6xl lg:mx-auto">
+        <h2 class="text-2xl font-semibold">Performance on common image classification datasets</h2>
+        <p>
+          <div class="grid md:grid-cols-1 gap-x-6 gap-y-8">
+            <div class="space-y-3">
+              <figure class="rounded-lg overflow-hidden flex items-center justify-center">
+                <img src="./assets/images/RMSE_trajectory_comparison (1).png" 
+                    alt="method_image0" 
+                    loading="lazy" 
+                    class="md:w-xl h-auto object-cover">
+              </figure>
+            </div>
+          ⠀
           </p>
-            <p>
-              $\mathbf{Algorithm\;\operatorname{SVD\;by\;LFA} (A, m, n)}$
-              <br>$\operatorname{Initialize}$: $X = \{0, \frac{1}{n}, \frac{2}{n}, \ldots, \frac{n-1}{n}\}$,  ${Y = \{0, \frac{1}{m}, \frac{2}{m}, \ldots, \frac{m-1}{m}}\}$
-              <br>${K = X \times Y}$
-              <br>$\mathtt{1:}$ for $k \in K$  do:                                                                      $\triangleright$ $\mathcal{O}(m\cdot n)$
-              <br>$\mathtt{2:}$        $A_k = \sum_{\delta \in \mathcal{N}} M_A^{(\delta)} \cdot e^{2 \pi \mathtt{i} \langle k, x \rangle}$                                                 $\triangleright$ $\mathcal{O}(1)$
-              <br>$\mathtt{3:}$        $U_k, \Sigma_k, V_k^* = \operatorname{SVD}(A_k)$                                                      $\triangleright$ $\mathcal{O}(c^3)$
-              <br>$\mathtt{4:}$ end for
-              <br>$\mathtt{5:}$ Collect all $U_k, V_k, U_k^*$ to obtain full SVD $A = U\Sigma V^*$
-            </p>
+
+          <h2 class="text-2xl font-semibold">Performance on DCIC Benchmark (Schmarje et al. 2022)</h2>
           <p>
-          Consequently, the overall complexity to compute the SVD by LFA requires only a complexity $\mathcal{O}(n^2 c^3)$ , in the case of a square input.
+            In this benchmark, the task is to label 10 probabilistic
+            datasets based on provided noisy annotations such that an image
+            classifier trained on those labels generalizes to unseen data.
+            Since labels are probabilistic, performance is measured using
+            the KL divergence. For comparison, the mean and median
+            performance differences relative to a fully supervised baseline
+            are reported across datasets. As shown in table III, our method
+            outperforms the state of the art in this benchmark. It is
+            best on low annotation budgets as well as on large budgets
+            where each image is annotated at least once. This reflects
+            the flexibility of our approach, enabled by the choice of
+            the spreading intensity $\alpha$, which can be reduced for larger
+            annotation budgets.
+          <div class="grid md:grid-cols-1 gap-x-6 gap-y-8">
+            <div class="space-y-3">
+              <figure class="rounded-lg overflow-hidden flex items-center justify-center">
+                <img src="./assets/images/RMSE_trajectories_PLS_CIFAR10-H_CLIP+UMAP_d=20_k=20 (1).png" 
+                    alt="method_image0" 
+                    loading="lazy" 
+                    class="md:w-xl h-auto object-cover">
+              </figure>
+            </div>
+          ⠀
           </p>
-        </p>
+          
       </section>
       
       <!-- results -->
-      
-      <section id="results" class="space-y-6 rounded-xl px-6 py-8 lg:max-w-6xl lg:mx-auto">
-          <h2 class="text-2xl font-semibold">Qualitative Results</h2>
-          <!-- ──  Captioning Quality ───────────────────────────────────── -->
-          <div
-          class="flex flex-col min-[1360px]:flex-row min-[1360px]:items-start min-[1360px]:gap-8">
-          <!-- Explanatory text -->
-          <div class="space-y-3 mb-4 min-[1360px]:mb-0 min-[1360px]:w-1/3">
-              <h3 class="font-semibold text-lg">
-                Execution runtime
-              </h3>
-              <p class="text-sm leading-relaxed">
-                Besides the analysis of the computational complexity we study the execution runtime in seconds ($s$) for different input sizes $n$. The number of channels is fixed to $16$ for in- and output channels.
+      <section id="results" class="space-y-6 bg-gray-100 rounded-xl px-6 py-8 lg:max-w-6xl lg:mx-auto">
+        <h2 class="text-2xl font-semibold">Consistency Results</h2>
+        <p>
+          To achieve consistency, we increase the spreading intensity
+          α to reduce variance while also reducing the bandwidth of
+          the underlying ε-graph to control bias. We configure the rates
+          such that both variance and bias can be controlled, i.e., $\alpha \to 1$
+          sufficiently slow such that shrinking neighborhoods still fill up
+          with data points. Bias is controlled via a path length argument
+          for which we exploit the neighborhood structure and the fact
+          that weights are multiplied with α on each edge so that the
+          influence from nodes via long paths is small. We derived the following theorem:
+          <br><br>
+          Let $\varepsilon> 0$ and $\delta \in(0,1)$. Under the above assumptions, when choosing the spreading intensity as \mbox{$\alpha_n = 1 - n^{\frac{1}{d+1}} \to 1$} dependent on the dataset size, the bandwidth of the epsilon-graph as \mbox{$h_n = \varepsilon /  (3 L_y \lceil\log_{\alpha_n} \varepsilon / (\sqrt{2}\,12) \rceil) \to 0$}, and providing an annotation budget of at least \mbox{$m_n = O(n^{1 - \frac{1}{2(d+1)}} \log n)$}, for n sufficiently large, the PLS algorithm returns estimated soft labels $\hat{p}_1, \ldots, \hat{p}_n$ such that \mbox{$P(\exists\, q\in\{1,\ldots, n\}: \| \hat{p}_q - p_q\|_2 > \varepsilon) \leq \delta$}.
 
-                We begin by comparing the runtimes of the explicit computation and the Fourier-based computations in Figure 3. For the computation of the explicit SVD we observe that the runtime grows rapidly with increasing input size. The maximum tractable size we were able to decompose was an input of $64 \times 64$. The computation of the corresponding $\approx 65$ thousand singular values took around 14 hours. On the other hand, the SVDs by Fourier-based approaches scale better. At $n=64$ the computation of $\approx 65$ thousand singular values takes only $\approx 0.1$ seconds. For very small input sizes, i.e., $n=4$, the FFT-based approach is slightly faster. When increasing the input dimension, our LFA-based approach becomes dominant. For example for an input of size $512 \times 512$ our LFA-based approach is about $14.5 \%$ faster. Furthermore, we observe, that Fourier-based approaches are scalable to very large input dimensions, as illustrated in Figure 3(b). 
-
-                As the input size increases, our LFA-based approach scales better than the FFT-based approach. For example at $n = 2^{14}$, which corresponds to the computation of $4$ billion singular values. With the FFT-based approach the compuation of $4$ billion singular values takes approximatively $3$ hours, with our LFA-based approach we obtain the same singular values in approximatevly $2$ hours. This corresponds to an improvement of $30.6\%$.
-
-                Figure 3(a): Runtimes to compute SVD for input sizes $n \in \{4,8,16, \ldots, 512\}$ comparing the explixit computation and FFT-based computations. The number of channels is fixed to $16$ for input and output channel dimension respectively. Both axes are log-scaled.
-                ![]('figs/runtime-lfa_vs_fft-loglog-1.png')
-                Figure 3(b): Runtimes to compute the SVD for inputs with $n \in \{2^i | i \in 8, 10, \ldots, 14\}$.  The number if channels is fixed to $16$ and the $x$-axis is log-scaled.
-              </p>
-          </div>
-      
-          <!-- Chart -->
-          <div class="flex-1 overflow-x-auto">
-              <img src="./assets/images/runtime-lfa_vs_fft-xlog-1.png" alt="table1" class="chart-image w-full border rounded-md" />
-          </div>
-          </div>
-      
-        <!-- ─────────────────────────────────── -->
-          <div
-              class="flex flex-col min-[1360px]:flex-row min-[1360px]:items-start min-[1360px]:gap-8">
-              <!-- Explanatory text -->
-              <div
-                  class="space-y-3 mb-4 min-[1360px]:mb-0 min-[1360px]:w-1/3">
-                  <h3 class="font-semibold text-lg">
-                    Effect of boundary conditions
-                  </h3>
-                  <p>
-                    In order to enable diagonalization in the Fourier-domain, we assumed periodic boundary conditions. However, in CNNs, typically Dirichelt boundary conditions, i.e., zero padding, is applied. To this end, we studied the effect of boundary conditions on the singular values in Figure 4. 
-                    
-                    Figure 4 "Effect on Dirichlet and periodic boundary conditions on the Singular values for input sizes in $n$ 
-                    
-                    For small $n$ the boundary effects dominate, as the singular values differ noticeably. Nevertheless, as the input dimension increases, the influence becomes negligible and consequently, the computation by LFA remains accurate for large input feature maps in practical applications. 
-                  </p>
-              </div>
-                  <!-- Chart -->
-                  <div class="flex-1 overflow-x-auto">
-                    <img src="./assets/images/boundary_cond.png" alt="table2" class="chart-image w-full border rounded-md"/>
-                </div>
-              </div>
-
-        <!-- ─────────────────────────────────── -->
-        <div
-            class="flex flex-col min-[1360px]:flex-row min-[1360px]:items-start min-[1360px]:gap-8">
-            <!-- Explanatory text -->
-            <div
-                class="space-y-3 mb-4 min-[1360px]:mb-0 min-[1360px]:w-1/3">
-                <h3 class="font-semibold text-lg">
-                  Memory layout
-                </h3>
-                <p>Additionally, in our experiments we observed, that our LFA-based implementation yields an memory layout, which allows for a faster computation of the subsequent SVD by a standard routine such as $\mathtt{NumPy}$.</p>
-            </div>
-        </div>
+              More precisely, depending on $\varepsilon$ and $\delta$, the following sample complexity bound holds for $n$:
+              \begin{align}
+                  &P(\exists\, q\in\{1,\ldots, n\}: \| \hat{p}_q - p_q\|_2 > \varepsilon) \nonumber \\ &\leq 12 n C \exp\left( - \zeta  \frac{m_n}{n^{1-\frac{1}{2(d+1)}}}\right)
+              \end{align}
+              with some constant $\zeta$ depending on $\varepsilon$, the minimal and maximal density $p_{\min}$, $p_{\max}$, the feature space $\mathcal{X}$ and its dimension $d$, the number of classes $C$, and the Lipschitz constant $L_y$.
+          ⠀
+          </p>
+          
       </section>
 
       <!-- RESOURCES -->
       <section id="resources" class="space-y-6 px-6 py-8 lg:max-w-6xl lg:mx-auto">
         <h2 class="text-2xl font-semibold">Resources & Links</h2>
         <ul class="list-disc list-inside space-y-2">
-          <li><a href="https://ebooks.iospress.nl/doi/10.3233/FAIA250793" class="text-blue-600 hover:underline">Paper</a></li>
-          <li><a href="https://github.com/vanbetteray/conv_svd_by_lfa" class="text-blue-600 hover:underline">GitHub</a></li>
+          <li><a href="https://arxiv.org/abs/2602.04574" class="text-blue-600 hover:underline">Paper</a></li>
+          <li><a href="https://github.com/JonathanKlees/prob_label_spreading" class="text-blue-600 hover:underline">GitHub</a></li>
         </ul>
       </section>
 
@@ -385,39 +347,15 @@
               </a>
             </p>
           </div>
-      
-          <!-- Just scan it -->
-          <div class="w-40 flex flex-col items-center">
-            <a href="https://www.ki-deltalearning.de/" target="_blank" rel="noopener noreferrer">
-              <img
-                src="./assets/images/project-delta-learning.png"
-                alt="Just scan it 3d Logo"
-                loading="lazy"
-                class="w-full h-auto"
-              >
-            </a>
-            <p class="mt-2 text-sm text-gray-600 text-center">
-              <a
-                href="https://www.ki-deltalearning.de/"
-                class="text-blue-600 hover:underline"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                KI Delta Learning
-              </a>
-            </p>
-          </div>
         </div>
-        <p>This work is partially supported by the German Federal Ministry for Eco-
-          nomic Affairs and Climate Action, within the project “KI Delta Learning”
-          (grant no. 19A19013Q) and partially supported by the German Federal Ministry of Research and Technology and Space.
-          <br><br>∗∗ M.R. acknowledges support by the German Federal Ministry of Education
-          and Research within the junior research group project “UnrEAL” (grant no.
-          01IS22069).
-          <br><br>
-          ∗∗∗ The contribution of K.K. is partially funded by the European Union’s
-          HORIZON MSCA Doctoral Networks programme project AQTIVATE (grant
-          no. 101072344)</p>
+        <p>J.K. and M.R. acknowledge support by the BMFTR within
+the project “RELiABEL” (grant no. 16IS24019B). D.K. also
+acknowledges support within the project “RELiABEL” (grant
+no. 16IS24019A). 
+<br><br>P.S. and M.R. acknowledge support by
+the state of North Rhine-Westphalia and the European Union
+within the EFRE/JTF project “Just scan it 3D” (grant no.
+EFRE20800529).</p>
       </section>
 
       <!-- CITATION (bottom) -->
@@ -431,14 +369,15 @@
                       bg-gray-100 rounded-lg p-3
                       text-[0.70rem] leading-5 font-mono
                       text-gray-700 select-all">
-                      @inproceedings{vanBetteray2025LFA,  
-                        author = {Antonia van Betteray and Matthias Rottmann and Karsten Kahl},  
-                        title = {LFA Applied to CNNs: Efficient Singular Value Decomposition of Convolutional Mappings by Local Fourier Analysis},  
-                        booktitle = {Frontiers in Artificial Intelligence and Applications, Volume 413: ECAI 2025},  
-                        pages = {90--97},  
-                        year = {2025},  
-                        doi = {10.3233/FAIA250793},  
-                        publisher = {IOS Press} }
+                      @misc{klees2026probabilisticlabelspreadingefficient,
+      title={Probabilistic Label Spreading: Efficient and Consistent Estimation of Soft Labels with Epistemic Uncertainty on Graphs}, 
+      author={Jonathan Klees and Tobias Riedlinger and Peter Stehr and Bennet Böddecker and Daniel Kondermann and Matthias Rottmann},
+      year={2026},
+      eprint={2602.04574},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2602.04574}, 
+}
           </pre>
 
           <!-- copy‑to‑clipboard button -->
@@ -471,7 +410,7 @@
         <h2 class="text-2xl font-semibold">Contact</h2>
         <p class="text-sm">Have questions or want to collaborate? Reach out:</p>
         <ul class="space-y-1 text-sm">
-          <li>Email: <a href="mailto:antonia.vanbetteray[at]uni-osnabrueck.de" class="text-blue-600 hover:underline">antonia.vanbetteray[at]uni-osnabrueck.de</a></li>
+          <li>Email: <a href="mailto:jonathan.klees[at]uni-osnabrueck.de" class="text-blue-600 hover:underline">jonathan.klees[at]uni-osnabrueck.de</a></li>
         </ul>
       </section>
 
